@@ -71,7 +71,7 @@ public class CorsFilter implements Filter {
     response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, HEAD, DELETE");
 
     ZeppelinConfiguration zeppelinConfiguration = ZeppelinConfiguration.create();
-    response.setHeader("X-FRAME-OPTIONS", zeppelinConfiguration.getXFrameOptions());
+    // response.setHeader("X-FRAME-OPTIONS", zeppelinConfiguration.getXFrameOptions());
     if (zeppelinConfiguration.useSsl()) {
       response.setHeader("Strict-Transport-Security", zeppelinConfiguration.getStrictTransport());
     }
